@@ -1,0 +1,25 @@
+/*
+Errno::ENOENT: No such file or directory - path/sass-directory
+
+Backtrace:
+/Users/vinsol/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:360:in `read'
+/Users/vinsol/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:360:in `update_stylesheet'
+/Users/vinsol/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+/Users/vinsol/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:201:in `each'
+/Users/vinsol/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+/Users/vinsol/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:235:in `watch'
+/Users/vinsol/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.19/lib/sass/plugin.rb:107:in `method_missing'
+/Users/vinsol/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.19/lib/sass/exec.rb:463:in `watch_or_update'
+/Users/vinsol/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.19/lib/sass/exec.rb:326:in `process_result'
+/Users/vinsol/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.19/lib/sass/exec.rb:41:in `parse'
+/Users/vinsol/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.19/lib/sass/exec.rb:21:in `parse!'
+/Users/vinsol/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.19/bin/sass:13:in `<top (required)>'
+/Users/vinsol/.rvm/gems/ruby-2.0.0-p247/bin/sass:23:in `load'
+/Users/vinsol/.rvm/gems/ruby-2.0.0-p247/bin/sass:23:in `<main>'
+/Users/vinsol/.rvm/gems/ruby-2.0.0-p247/bin/ruby_executable_hooks:15:in `eval'
+/Users/vinsol/.rvm/gems/ruby-2.0.0-p247/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Errno::ENOENT: No such file or directory - path/sass-directory"; }

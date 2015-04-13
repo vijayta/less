@@ -1,3 +1,207 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@mixin border-radius($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+/** Define Fonts **/
+@font-face {
+  font-family: 'oswald_regular';
+  src: url('fonts/oswald-regular.eot');
+  src: url('fonts/oswald-regular.eot?#iefix') format('embedded-opentype'),
+       url('fonts/oswald-regular.woff2') format('woff2'),
+       url('fonts/oswald-regular.woff') format('woff'),
+       url('fonts/oswald-regular.ttf') format('truetype'),
+       url('fonts/oswald-regular.svg#oswald_regularregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/** Define Colors **/
+$black: #000;
+$white: #fff;
+$green: #8db737;
+$darkGreen: #719d18; 
+$red: #cc0000;
+$maroon: #a20303;
+$blue: #02c7e6;
+$darkBlue: #0197b2;
+$orange: #ff9900;
+$darkOrange: #cc6600; 
+$grey: #231f20;
+
+/** Define Fonts **/
+$font-stack: arial, Helvetica, sans-serif; 
+$font_oswald: oswald_regular, Helvetica, sans-serif; 
+
+
+/** Define Button design **/
+.button{
+  font-family: $font_oswald;
+  font-size: 30px; 
+  height: 78px; 
+  line-height: 72px; 
+  width: 212px; 
+  display: inline-block; 
+  position: absolute;
+  bottom: 0; 
+  right: 80px; 
+  color: $white;
+  @include border-radius(10px);
+  border: 3px solid;
+}
+
+body{ margin: 0; padding: 0; }
+
+.exercise{
+  nav{
+    background-color: $black;    
+    text-align: center;
+    padding: 20px 0;
+    li{
+      display: inline; 
+    }
+    a{
+      font-size: 20px; 
+      color: $white;
+      padding: 0 20px; 
+    }
+  }
+  article{
+    background-size: 100% 100% !important; 
+    height: 755px; 
+    overflow: hidden;
+    font-family: $font-stack; 
+    .wrapper{
+      width: 950px; 
+      margin: 0 auto;
+      .block{
+        width: 494px; 
+        float: left; 
+        h1, p{
+         background: rgba(0, 0, 0, .5);
+         color: $white;
+         padding: 0 10px; 
+         font-family: $font-stack; 
+        }
+        h1{
+          font-size: 50px; 
+          margin: 0 0 30px; 
+          line-height: 80px; 
+          font-family: $font_oswald;
+        }
+        p{
+          font-size: 20px; 
+          line-height: 24px; 
+          margin: 10px 0; 
+          padding: 5px;
+        }
+      } 
+    }
+    .tree{
+      background: url('tree.png') no-repeat left top; 
+      width: 360px; 
+      height: 411px;
+      float: right; 
+      position: relative; 
+      text-align: center; 
+      a:hover{
+        text-decoration: none; 
+      }
+    }
+  }
+  .article01{
+    background: url('1.jpg') no-repeat center center;
+    padding-top: 130px; 
+    .wrapper{
+      .tree{
+        a{
+          @extend .button;
+          background-color: $orange;
+          border-color: $darkOrange;
+        }
+      }
+    }
+  }
+  .article02{
+    background: url('2.jpg') no-repeat center center;
+    padding-top: 195px; 
+    .wrapper{
+      .block{
+        float: right;
+      }
+      .tree{
+        float: left;
+        a{
+          @extend .button;
+          background-color: $blue;
+          border-color: $darkBlue;
+        }
+      }
+    }
+  }
+  .article03{
+    background: url('3.jpg') no-repeat center center;
+    padding-top: 192px; 
+    .wrapper{
+      .tree{
+        a{
+          @extend .button;
+          background-color: $green;
+          border-color: $darkGreen;
+        }
+      }
+    }
+  }
+  .article04{
+    background: url('4.jpg') no-repeat center center;
+    padding-top: 192px; 
+    .wrapper{
+      .block{
+        float: right;
+      }
+      .tree{
+        float: left;
+        a{
+          @extend .button;
+          background-color: $red;
+          border-color: $maroon;
+        }
+      }
+    }
+  }
+  footer{
+    background-color: $grey;
+    color: $white;
+    padding: 30px 0;
+    .wrapper{
+      width: 950px; 
+      overflow: hidden; 
+      margin: 0 auto; 
+      .block{ 
+        width: 400px; 
+        margin-right: 50px; 
+        float: left;
+        h2{
+          font-size: 24px; 
+          line-height: 28px;
+        }
+        p{
+          font-size: 18px; 
+          line-height: 22px; 
+          padding: 0 10px; 
+          margin-bottom: 30px !important; 
+        }
+      }
+      .block:nth-child(2){
+        float: right;
+        margin-right: 0; 
+      }
+    }
+  }
+}

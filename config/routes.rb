@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   resources :posts
 
   root 'welcome#index'
+  get 'welcome/progress'
+  get 'welcome/exercise'
   
 
   # The priority is based upon order of creation: first created -> highest priority.
